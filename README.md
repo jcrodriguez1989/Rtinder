@@ -1,4 +1,4 @@
-# Rtinder
+# Rtinder: Unofficial API Tinder for R
 
 ### Access to Tinder API in R.
 Are you a geek and want to meet people? Then **Rtinder** is for you!
