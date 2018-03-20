@@ -1,0 +1,13 @@
+Package: Rtinder
+Type: Package
+Title: Access to Tinder API in R
+Version: 0.1.0
+Author: Juan Cruz Rodriguez
+Maintainer: Juan Cruz Rodriguez <jcrodriguez@bdmg.com.ar>
+Description: Provides an interface to the tinder API. Allows swiping, getting
+    matches, sending messages, etc.
+License: GPL (>= 2)
+Imports: httr, rvest
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
