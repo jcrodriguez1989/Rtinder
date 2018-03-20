@@ -7,6 +7,7 @@
 \title{Rtinder package}
 \description{
 Access to Tinder API in R.
+Are you a geek and want to meet people? Then Rtinder is for you!
 Provides an interface to the tinder API. Allows swiping, getting
 matches, sending messages, etc.
 Since the tinder API is not publicly open. Without the github repository

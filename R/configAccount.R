@@ -24,6 +24,8 @@
 #' @examples \dontrun{
 #' # When first using Rtinder, we should configure our account.
 #' # It will save (by default) the config file in ~/.tinderAccount.R .
+#' # It wont save any information about the mail and password.
+#' # Nor send it to any server besides Facebook.
 #' configAccount('MY_FB_REGISTERED_MAIL', 'MY_FB_PASSWORD');
 #' }
 #'
