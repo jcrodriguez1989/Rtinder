@@ -33,10 +33,7 @@ login <- function(accountFile=paste0(Sys.getenv('HOME'), '/.tinderAccount.R')) {
     # try to get headers from github file (updated)
     apiCfg <- try({
         e <- new.env();
-        ## todo: change it to github url
-        source('~/Dropbox/R/Rtinder/R/apiCfg.R', e);
-        # source('~/Dropbox/R/Rtinder/R/apiCfgaa.R', e);
-        # source('~/Dropbox/R/Rtinder/apiCfgFake.R', e);
+        source('https://raw.githubusercontent.com/jcrodriguez1989/Rtinder/master/R/apiCfg.R', e);
         as.list(e);
     });
 
