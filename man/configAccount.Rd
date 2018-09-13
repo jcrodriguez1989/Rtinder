@@ -29,9 +29,10 @@ configAccount('MY_FB_REGISTERED_MAIL', 'MY_FB_PASSWORD');
 }
 
 }
-\seealso{
-{login}
-}
 \author{
 Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
 }
+\seealso{
+{login}
+}
+

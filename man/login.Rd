@@ -26,9 +26,10 @@ login();
 }
 
 }
-\seealso{
-{configAccount}
-}
 \author{
 Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
 }
+\seealso{
+{configAccount}
+}
+
