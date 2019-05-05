@@ -8,6 +8,7 @@ Description: Provides an interface to the tinder API. Allows swiping, getting
     matches, sending messages, etc.
 License: GPL (>= 2)
 Imports:
+    getPass,
     httr,
     rvest
 Encoding: UTF-8

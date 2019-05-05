@@ -17,6 +17,7 @@
 #'
 #' @importFrom httr user_agent
 #' @importFrom rvest html_session html_node html_form set_values submit_form
+#' @importFrom getPass getPass
 #'
 #' @examples
 #' \dontrun{
@@ -27,7 +28,7 @@
 #' configAccount("MY_FB_REGISTERED_MAIL", "MY_FB_PASSWORD")
 #' }
 #'
-configAccount <- function(mail, password,
+configAccount <- function(mail, password = getPass("Facebook password:"),
                           saveAccountFile =
                             paste0(Sys.getenv("HOME"), "/.tinderAccount.R")) {
   mobileUserAgent <- "Tinder/7.5.3 (iPhone; iOS 10.3.2; Scale/2.00)"

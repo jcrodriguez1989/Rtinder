@@ -4,7 +4,7 @@
 \alias{configAccount}
 \title{Configure tinder account}
 \usage{
-configAccount(mail, password,
+configAccount(mail, password = getPass("Facebook password:"),
   saveAccountFile = paste0(Sys.getenv("HOME"), "/.tinderAccount.R"))
 }
 \arguments{
