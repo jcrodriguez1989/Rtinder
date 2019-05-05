@@ -45,6 +45,9 @@ library("Rtinder")
 # Wont send info to any server besides Facebook.
 # You can see configAccount, it is open source ;)
 configAccount("MY_FB_REGISTERED_MAIL", "MY_FB_PASSWORD")
+
+# or by SMS with
+configAccountSms(MY_PHONE_NUM) # configAccountSms(543516881918)
 ```
 
 ``` r
@@ -72,6 +75,5 @@ names(fstSwipe)
 names(fstSwipe$user)
 ```
 
-    ## [1] "_id"          "bio"          "birth_date"   "name"        
-    ## [5] "photos"       "gender"       "jobs"         "schools"     
-    ## [9] "is_traveling"
+    ## [1] "_id"        "bio"        "birth_date" "name"       "photos"    
+    ## [6] "gender"     "jobs"       "schools"

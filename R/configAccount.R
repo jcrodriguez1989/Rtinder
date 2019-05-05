@@ -56,9 +56,7 @@ configAccount <- function(mail, password = getPass("Facebook password:"),
   )
 
   sink(saveAccountFile)
-  cat(paste0("userId <- '", userId, "';
-"))
-  cat(paste0("accesstoken <- '", accesstoken, "';
-"))
+  cat(paste0("userId <- '", userId, "';\n"))
+  cat(paste0("accesstoken <- '", accesstoken, "';\n"))
   sink()
 }

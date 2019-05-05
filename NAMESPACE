@@ -3,6 +3,7 @@
 export(changeLocation)
 export(changeSettings)
 export(configAccount)
+export(configAccountSms)
 export(dislike)
 export(getMatchInfo)
 export(getOwnMetadata)

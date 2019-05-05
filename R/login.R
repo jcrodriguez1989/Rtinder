@@ -53,16 +53,24 @@ login <- function(accountFile =
   }
   e <- new.env()
   source(accountFile, e)
-  fbUserId <- e$userId
-  fbAuthtoken <- e$accesstoken
+
+  if ("smsAccesstoken" %in% names(e)) {
+    # user logged in with sms
+    userId <- e$userId
+    authtoken <- e$smsAccesstoken
+    url <- paste0(host, "/v2/auth/login/accountkit")
+  } else {
+    # user logged in with facebook
+    userId <- e$userId
+    authtoken <- e$accesstoken
+    url <- paste0(host, "/v2/auth/login/facebook")
+  }
   rm(e)
 
   # try to login
-  url <- paste0(host, "/v2/auth/login/facebook")
-  req <- POST(
-    url,
+  req <- POST(url,
     config = headers,
-    body = list(token = fbAuthtoken),
+    body = list(token = authtoken),
     encode = "json"
   )
   res <- NULL

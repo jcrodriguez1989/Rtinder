@@ -42,6 +42,9 @@ library("Rtinder")
 # Wont send info to any server besides Facebook.
 # You can see configAccount, it is open source ;)
 configAccount("MY_FB_REGISTERED_MAIL", "MY_FB_PASSWORD")
+
+# or by SMS with
+configAccountSms(MY_PHONE_NUM) # configAccountSms(543516881918)
 ```
 ```{r eval=TRUE}
 # Now we can check if it can connect to tinder.
