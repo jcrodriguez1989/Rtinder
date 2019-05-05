@@ -7,12 +7,9 @@
 getOwnMetadata()
 }
 \description{
-\code{getOwnMetadata} Returns metadata on yourself. Including the following keys:
+\code{getOwnMetadata} Returns metadata on yourself. Including the following
+keys:
 ['globals', 'client_resources', 'versions', 'purchases',
  'status', 'groups', 'products', 'rating', 'tutorials',
   'travel', 'notifications', 'user']
 }
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
-}
-

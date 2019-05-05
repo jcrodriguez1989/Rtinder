@@ -21,25 +21,24 @@
 #' 4 : Inappropriate Photos and no explanation
 #' @param explanation string with the reporting explanation.?
 #'
-#' @author
-#' Juan Cruz Rodriguez \email{jcrodriguez@@bdmg.com.ar}
-#'
 #' @importFrom httr add_headers content POST
 #'
 
 like <- function(personId) {
-    headers <- .getHeaders();
-    host <- .getHost();
-    url <- paste0(host, '/like/', personId);
-    r <- GET(url, config=add_headers(unlist(headers)));
-    res <- NULL;
-    if (r$status_code == 200) {
-        res <- content(r);
-    } else {
-        print(paste("Something went wrong. Could not like:",
-                    r$status_code));
-    }
-    return(res);
+  headers <- .getHeaders()
+  host <- .getHost()
+  url <- paste0(host, "/like/", personId)
+  r <- GET(url, config = add_headers(unlist(headers)))
+  res <- NULL
+  if (r$status_code == 200) {
+    res <- content(r)
+  } else {
+    print(paste(
+      "Something went wrong. Could not like:",
+      r$status_code
+    ))
+  }
+  return(res)
 }
 
 
@@ -48,21 +47,23 @@ like <- function(personId) {
 #'
 
 superlike <- function(personId) {
-    headers <- .getHeaders();
-    host <- .getHost();
-    url <- paste0(host, '/like/', personId, '/super');
-    r <- POST(url,
-              config=add_headers(unlist(headers)),
-              encode='json'
-    );
-    res <- NULL;
-    if (r$status_code == 200) {
-        res <- content(r);
-    } else {
-        print(paste("Something went wrong. Could not superlike:",
-                    r$status_code));
-    }
-    return(res);
+  headers <- .getHeaders()
+  host <- .getHost()
+  url <- paste0(host, "/like/", personId, "/super")
+  r <- POST(url,
+    config = add_headers(unlist(headers)),
+    encode = "json"
+  )
+  res <- NULL
+  if (r$status_code == 200) {
+    res <- content(r)
+  } else {
+    print(paste(
+      "Something went wrong. Could not superlike:",
+      r$status_code
+    ))
+  }
+  return(res)
 }
 
 #' @rdname likes
@@ -70,39 +71,43 @@ superlike <- function(personId) {
 #'
 
 dislike <- function(personId) {
-    headers <- .getHeaders();
-    host <- .getHost();
-    url <- paste0(host, '/pass/', personId);
-    r <- GET(url, config=add_headers(unlist(headers)));
-    res <- NULL;
-    if (r$status_code == 200) {
-        res <- content(r);
-    } else {
-        print(paste("Something went wrong. Could not dislike:",
-                    r$status_code));
-    }
-    return(res);
+  headers <- .getHeaders()
+  host <- .getHost()
+  url <- paste0(host, "/pass/", personId)
+  r <- GET(url, config = add_headers(unlist(headers)))
+  res <- NULL
+  if (r$status_code == 200) {
+    res <- content(r)
+  } else {
+    print(paste(
+      "Something went wrong. Could not dislike:",
+      r$status_code
+    ))
+  }
+  return(res)
 }
 
 #' @rdname likes
 #' @export
 #'
 
-reportPerson <- function(personId, cause, explanation='') {
-    headers <- .getHeaders();
-    host <- .getHost();
-    url <- paste0(host, '/report/', personId);
-    r <- POST(url,
-              config=add_headers(unlist(headers)),
-              body=list(cause= cause, text= explanation),
-              encode='json'
-    );
-    res <- NULL;
-    if (r$status_code == 200) {
-        res <- content(r);
-    } else {
-        print(paste("Something went wrong. Could not report:",
-                    r$status_code));
-    }
-    return(res);
+reportPerson <- function(personId, cause, explanation = "") {
+  headers <- .getHeaders()
+  host <- .getHost()
+  url <- paste0(host, "/report/", personId)
+  r <- POST(url,
+    config = add_headers(unlist(headers)),
+    body = list(cause = cause, text = explanation),
+    encode = "json"
+  )
+  res <- NULL
+  if (r$status_code == 200) {
+    res <- content(r)
+  } else {
+    print(paste(
+      "Something went wrong. Could not report:",
+      r$status_code
+    ))
+  }
+  return(res)
 }

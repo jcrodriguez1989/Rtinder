@@ -19,7 +19,3 @@ Note: Careful!
 \code{changeLocationPlus} Updates your location to the given float inputs
 Note: Requires a passport / Tinder Plus
 }
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
-}
-

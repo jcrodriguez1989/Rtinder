@@ -18,27 +18,26 @@
 #' discoverable: true | false
 #' {"photo_optimizer_enabled":false}
 #'
-#' @author
-#' Juan Cruz Rodriguez \email{jcrodriguez@@bdmg.com.ar}
-#'
 #' @importFrom httr add_headers content POST
 #'
 
 changeSettings <- function(settings) {
-    headers <- .getHeaders();
-    host <- .getHost();
-    url <- paste0(host, '/profile');
-    r <- POST(url,
-              config=add_headers(unlist(headers)),
-              body=settings,
-              encode='json'
-    );
-    res <- NULL;
-    if (r$status_code == 200) {
-        res <- content(r);
-    } else {
-        print(paste("Something went wrong. Could not change your preferences:",
-                    r$status_code));
-    }
-    return(res);
+  headers <- .getHeaders()
+  host <- .getHost()
+  url <- paste0(host, "/profile")
+  r <- POST(url,
+    config = add_headers(unlist(headers)),
+    body = settings,
+    encode = "json"
+  )
+  res <- NULL
+  if (r$status_code == 200) {
+    res <- content(r)
+  } else {
+    print(paste(
+      "Something went wrong. Could not change your preferences:",
+      r$status_code
+    ))
+  }
+  return(res)
 }

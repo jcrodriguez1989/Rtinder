@@ -4,8 +4,8 @@
 \alias{configAccount}
 \title{Configure tinder account}
 \usage{
-configAccount(mail, password, saveAccountFile = paste0(Sys.getenv("HOME"),
-  "/.tinderAccount.R"))
+configAccount(mail, password,
+  saveAccountFile = paste0(Sys.getenv("HOME"), "/.tinderAccount.R"))
 }
 \arguments{
 \item{mail}{mail to login in Facebook.}
@@ -25,14 +25,10 @@ Has to be done once. After, \code{login} will continue using this info.
 # It will save (by default) the config file in ~/.tinderAccount.R .
 # It wont save any information about the mail and password.
 # Nor send it to any server besides Facebook.
-configAccount('MY_FB_REGISTERED_MAIL', 'MY_FB_PASSWORD');
+configAccount("MY_FB_REGISTERED_MAIL", "MY_FB_PASSWORD")
 }
 
-}
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
 }
 \seealso{
 {login}
 }
-

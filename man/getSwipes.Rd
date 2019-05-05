@@ -9,7 +9,3 @@ getSwipes()
 \description{
 \code{getSwipes} Returns a list of users that you can swipe on.
 }
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
-}
-

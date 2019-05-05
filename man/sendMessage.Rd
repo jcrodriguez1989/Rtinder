@@ -14,7 +14,3 @@ sendMessage(matchId, message)
 \description{
 \code{sendMessage} Sends a message to a match.
 }
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
-}
-

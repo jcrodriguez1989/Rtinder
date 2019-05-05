@@ -12,7 +12,3 @@ getMatchInfo(matchId)
 \description{
 \code{getMatchInfo} Get match information
 }
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
-}
-

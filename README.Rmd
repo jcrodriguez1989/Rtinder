@@ -22,9 +22,10 @@ Rtinder is only available as a GitHub package. To install it run the following
 from an R console:
 
 ```{r eval=FALSE}
-if (!require("devtools"))
-  install.packages("devtools")
-devtools::install_github("jcrodriguez1989/Rtinder")
+if (!require("remotes")) {
+  install.packages("remotes")
+}
+remotes::install_github("jcrodriguez1989/Rtinder")
 ```
 
 ## Usage
@@ -32,26 +33,25 @@ devtools::install_github("jcrodriguez1989/Rtinder")
 From an R console type:
 
 ```{r}
-library("Rtinder");
+library("Rtinder")
 ```
 ```{r eval=FALSE}
 # When first using Rtinder, we should configure the account.
 # It will save (by default) the config file in ~/.tinderAccount.R
 # It will save just the access token, not the mail nor the password.
-# Wont send info to any server besides Facebook. 
+# Wont send info to any server besides Facebook.
 # You can see configAccount, it is open source ;)
-configAccount('MY_FB_REGISTERED_MAIL', 'MY_FB_PASSWORD');
-
+configAccount("MY_FB_REGISTERED_MAIL", "MY_FB_PASSWORD")
 ```
 ```{r eval=TRUE}
 # Now we can check if it can connect to tinder.
 # login() must be executed each time we load Rtinder library.
-invisible(login());
-
+invisible(login())
 # And finally we can start swiping!
-mySwipes <- getSwipes(); # mySwipes is a list
-fstSwipe <- mySwipes[[1]]; # fstSwipe is a list
-names(fstSwipe);
-names(fstSwipe$user);
-
+mySwipes <- getSwipes()
+# mySwipes is a list
+fstSwipe <- mySwipes[[1]]
+# fstSwipe is a list
+names(fstSwipe)
+names(fstSwipe$user)
 ```

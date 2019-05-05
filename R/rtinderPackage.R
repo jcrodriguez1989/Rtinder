@@ -7,27 +7,21 @@
 #' Since the tinder API is not publicly open. Without the github repository
 #' https://github.com/fbessez/Tinder , Rtinder would not have been possible.
 #'
-#'@docType package
-#'@name rtinderPackage
+#' @docType package
+#' @name rtinderPackage
 #'
-#' @author
-#' Juan Cruz Rodriguez \email{jcrodriguez@@bdmg.com.ar}
+#' @keywords tinder API
 #'
-#'@keywords tinder API
-#'
-#' @examples \dontrun{
+#' @examples
+#' \dontrun{
 #' # When first using Rtinder, we should configure our account.
 #' # It will save (by default) the config file in ~/.tinderAccount.R .
-#' configAccount('MY_FB_REGISTERED_MAIL', 'MY_FB_PASSWORD');
-#'
+#' configAccount("MY_FB_REGISTERED_MAIL", "MY_FB_PASSWORD")
 #' # Now we can check if it can connect to tinder.
 #' # login() must be executed each time we load Rtinder library.
-#' login();
-#'
+#' login()
 #' # And finally we can start swiping!
-#' mySwipes <- getSwipes();
+#' mySwipes <- getSwipes()
 #' }
 #'
-#'
-
 NULL

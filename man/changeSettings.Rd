@@ -21,7 +21,3 @@ discoverable: true | false
 \description{
 \code{changeSettings} Change own user settings
 }
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
-}
-

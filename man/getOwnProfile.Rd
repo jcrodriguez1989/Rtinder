@@ -17,9 +17,3 @@ getProfile(id)
 
 \code{getOwnProfile} Gets a user's profile via their id
 }
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
-
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
-}
-

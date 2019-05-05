@@ -22,14 +22,10 @@ variables. And tests if it can connect to tinder's API.
 \dontrun{
 # Check if can connect to tinder.
 # login() must be executed each time we load Rtinder library.
-login();
+login()
 }
 
-}
-\author{
-Juan Cruz Rodriguez \email{jcrodriguez@bdmg.com.ar}
 }
 \seealso{
 {configAccount}
 }
-
