@@ -1,11 +1,10 @@
 Rtinder: Unofficial API Tinder for R
 ================
 
-Are you a geek and want to meet people? Then Rtinder is for you\! (just
-kidding)
+R client for accessing Tinder’s API.
 
-Access the Tinder API for whatever you want: Data Science? Chatbot?
-Shiny app?
+I could not find any scientific project for which to use Tinder data,
+**I would love to be informed about the idea that comes to you**.
 
 Since the tinder API is not publicly open. Without the github repository
 <https://github.com/fbessez/Tinder> , Rtinder would not have been
@@ -67,9 +66,9 @@ fstSwipe <- mySwipes[[1]]
 names(fstSwipe)
 ```
 
-    ## [1] "type"         "user"         "facebook"     "spotify"     
-    ## [5] "distance_mi"  "content_hash" "s_number"     "teaser"      
-    ## [9] "teasers"
+    ##  [1] "type"         "user"         "instagram"    "facebook"    
+    ##  [5] "spotify"      "distance_mi"  "content_hash" "s_number"    
+    ##  [9] "teaser"       "teasers"
 
 ``` r
 names(fstSwipe$user)

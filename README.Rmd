@@ -3,9 +3,9 @@ title: "Rtinder: Unofficial API Tinder for R"
 output: github_document
 ---
 
-Are you a geek and want to meet people? Then Rtinder is for you! (just kidding)
+R client for accessing Tinder's API.
 
-Access the Tinder API for whatever you want: Data Science? Chatbot? Shiny app?
+I could not find any scientific project for which to use Tinder data, **I would love to be informed about the idea that comes to you**.
 
 Since the tinder API is not publicly open. Without the github repository
 https://github.com/fbessez/Tinder , Rtinder would not have been possible.
