@@ -50,7 +50,6 @@ configAccount <- function(mail, password = getPass("Facebook password:"),
     "hash=AeZqkIcf-NEW6vBd")
 
   session <- html_session(fbAuth, user_agent(mobileUserAgent))
-
   form <- html_form(html_node(session, "form"))
   form <- set_values(form, "email" = mail, "pass" = password)
 
@@ -64,14 +63,20 @@ configAccount <- function(mail, password = getPass("Facebook password:"),
 
   sessResp <- session$response
   userId <- sessResp$cookies[sessResp$cookies$name == "c_user", "value"]
-  sessRespString <- as.character(sessResp)
-  accesstoken <- sub(
-    "&data_access_expiration_time.*", "",
-    sub(".*&access_token=", "", sessRespString)
-  )
+  accesstoken <- get_token(sessResp)
 
   sink(saveAccountFile)
   cat(paste0("userId <- '", userId, "';\n"))
   cat(paste0("accesstoken <- '", accesstoken, "';\n"))
   sink()
+}
+
+get_token <- function(session_resp) {
+  string_w_token <- session_resp$all_headers[[1]]$headers$location
+  if (is.null(string_w_token))
+    return(character(0))
+  string_fields <- strsplit(string_w_token, "&")[[1]]
+  token_field <- string_fields[grep("access_token=", string_fields)]
+  accesstoken <- sub("access_token=", "", token_field)
+  return(accesstoken)
 }
