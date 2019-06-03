@@ -7,7 +7,8 @@
 getUpdates(lastActivityDate = "")
 }
 \arguments{
-\item{lastActivityDate}{The last activity date is defaulted at the beginning of time.
+\item{lastActivityDate}{The last activity date is defaulted at the beginning
+of time.
 Format for lastActivityDate: "2017-07-09T10:28:13.392Z"}
 }
 \description{

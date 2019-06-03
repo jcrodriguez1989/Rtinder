@@ -7,8 +7,9 @@
 #' @description
 #' \code{getUpdates} Returns all updates since the given activity date.
 #'
-#' @param lastActivityDate The last activity date is defaulted at the beginning of time.
-#' Format for lastActivityDate: "2017-07-09T10:28:13.392Z"
+#' @param lastActivityDate The last activity date is defaulted at the beginning
+#'   of time.
+#'   Format for lastActivityDate: "2017-07-09T10:28:13.392Z"
 #'
 #' @importFrom httr add_headers content POST
 #'
