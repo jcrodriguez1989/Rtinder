@@ -38,7 +38,7 @@ changeLocation <- function(lat, lon) {
       r$status_code
     ))
   }
-  return(res)
+  return(invisible(res))
 }
 
 resetLocation <- function() {
