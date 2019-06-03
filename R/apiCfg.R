@@ -1,7 +1,2 @@
-.headers <- list(
-  "app_version" = "6.9.4",
-  "platform" = "ios",
-  "content-type" = "application/json",
-  "User-agent" = "Tinder/7.5.3 (iPhone; iOS 10.3.2; Scale/2.00)"
-)
+.headers <- list()
 .host <- "https://api.gotinder.com"

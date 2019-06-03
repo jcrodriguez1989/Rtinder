@@ -24,7 +24,8 @@
 changeSettings <- function(settings) {
   headers <- .getHeaders()
   host <- .getHost()
-  url <- paste0(host, "/profile")
+  settings <- list(user = settings)
+  url <- paste0(host, "/v2/profile")
   r <- POST(url,
     config = add_headers(unlist(headers)),
     body = settings,
@@ -32,7 +33,7 @@ changeSettings <- function(settings) {
   )
   res <- NULL
   if (r$status_code == 200) {
-    res <- content(r)
+    res <- content(r)$data$user
   } else {
     print(paste(
       "Something went wrong. Could not change your preferences:",

@@ -86,5 +86,5 @@ login <- function(accountFile =
       req$status_code
     ))
   }
-  return(!is.null(res))
+  return(invisible(!is.null(res)))
 }
