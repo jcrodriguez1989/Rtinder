@@ -32,7 +32,7 @@ changeSettings <- function(settings) {
     encode = "json"
   )
   res <- NULL
-  if (r$status_code == 200) {
+  if (r$status_code == 200 && !is.null(content(r)$data$user)) {
     res <- content(r)$data$user
   } else {
     print(paste(
